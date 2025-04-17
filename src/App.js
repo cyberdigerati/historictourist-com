@@ -9,16 +9,16 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50 font-serif">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-y-auto">
         <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
         <div className="absolute inset-0 z-0">
-          {/* Background video would go here - placeholder gradient for now */}
           <div className="w-full h-full bg-gradient-to-r from-green-900 via-gray-800 to-gray-900 animate-gradient-x"></div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-20 text-center">
+        <div className="container mx-auto px-6 relative z-20 text-center pb-32">
+          {' '}
+          {/* Increased padding */}
           <div className="mb-8">
-            {/* Logo image */}
             <img
               src="/logo.png"
               alt="Environmental Design"
@@ -28,20 +28,17 @@ function App() {
               ENVIRONMENTALDESIGN.COM
             </h2>
           </div>
-
           <h1 className="text-5xl md:text-7xl font-light text-white mb-6">
             Where Environment Meets Intelligence
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-6 max-w-3xl mx-auto font-light">
             This is not just a domain. It's a movement waiting to be ignited.
           </p>
-
           <p className="text-2xl md:text-3xl text-green-300 mb-10 font-light">
             $2,500,000
           </p>
-
           {showInquiryForm ? (
-            <div className="max-w-md mx-auto">
+            <div className="w-full max-w-xl mx-auto px-4">
               <InquiryForm />
             </div>
           ) : (
