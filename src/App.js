@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import InquiryForm from './InquiryForm';
 import PrivacyPolicy from './PrivacyPolicy';
+import { Analytics } from '@vercel/analytics/react'; // Added this import
 
 function App() {
   const [showInquiryForm, setShowInquiryForm] = useState(false);
@@ -51,7 +52,6 @@ function App() {
           )}
         </div>
       </section>
-
       {/* Vision Carousel Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
@@ -100,7 +100,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* Why Section */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-6">
@@ -140,7 +139,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-12">
         <div className="container mx-auto px-6 text-center">
@@ -167,11 +165,11 @@ function App() {
           </div>
         </div>
       </footer>
-
       {/* Privacy Policy Modal */}
       {showPrivacyPolicy && (
         <PrivacyPolicy onClose={() => setShowPrivacyPolicy(false)} />
       )}
+      <Analytics /> {/* Added this line */}
     </div>
   );
 }
