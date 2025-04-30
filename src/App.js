@@ -36,7 +36,8 @@ function App() {
             This is not just a domain. It's a movement waiting to be ignited.
           </p>
           <p className="text-2xl md:text-3xl text-green-300 mb-10 font-light">
-            $2,500,000
+            Available Exclusively by Private Negotiation - Inquiries Accepted
+            from Verified Entities by Private Invitation
           </p>
           {showInquiryForm ? (
             <div className="w-full max-w-xl mx-auto px-4">
