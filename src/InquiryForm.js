@@ -24,22 +24,13 @@ function InquiryForm() {
     setError('');
 
     try {
-      // Add Web3Forms access key
-      const formDataWithKey = {
-        ...formData,
-        access_key: '2aa7c07f-2fd3-407a-b584-4b60db567c3f',
-        subject: `Domain Inquiry: EnvironmentalDesign.com - $2,500,000`,
-        from_name: 'EnvironmentalDesign.com Form',
-        to_email: 'environmentaldesign.com@proton.me',
-      };
-
-      const response = await fetch('https://api.web3forms.com/submit', {
+      // Submit to our own API endpoint instead of directly to Web3Forms
+      const response = await fetch('/api/submit-inquiry', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Accept: 'application/json',
         },
-        body: JSON.stringify(formDataWithKey),
+        body: JSON.stringify(formData),
       });
 
       const data = await response.json();
