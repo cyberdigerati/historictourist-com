@@ -38,7 +38,7 @@ module.exports = async function handler(req, res) {
     };
 
     // Import node-fetch for Vercel serverless functions
-    const fetch = require('node-fetch');
+    const fetch = (await import('node-fetch')).default;
 
     console.log('Submitting to Web3Forms...');
 
