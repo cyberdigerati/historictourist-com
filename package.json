@@ -1,6 +1,8 @@
 {
-  "name": "envirodesign",
+  "name": "historictourist-com",
   "version": "0.1.0",
+  "description": "The World's Premier Heritage Travel Platform",
+  "homepage": "https://historictourist.com",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^2.2.1",
