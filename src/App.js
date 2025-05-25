@@ -47,7 +47,7 @@ function App() {
               onClick={() => setShowInquiryForm(true)}
               className="border border-white hover:bg-white hover:text-black text-white px-8 py-3 rounded-none transition duration-300 text-lg tracking-wide"
             >
-              Partnership Inquiries
+              Collaboration Inquiries
             </button>
           )}
         </div>
@@ -233,12 +233,7 @@ function App() {
             >
               Follow @HistoricTourist on Instagram
             </a>
-            <button
-              onClick={() => setShowInquiryForm(true)}
-              className="border border-white text-white px-6 py-3 rounded-none hover:bg-white hover:text-blue-900 transition duration-300 font-medium"
-            >
-              Partnership Inquiries
-            </button>
+
             <a
               href="mailto:admin@historictourist.com?subject=Launch Notification"
               className="border border-yellow-500 text-yellow-300 px-6 py-3 rounded-none hover:bg-yellow-500 hover:text-black transition duration-300 font-medium"

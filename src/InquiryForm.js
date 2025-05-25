@@ -42,7 +42,7 @@ function InquiryForm() {
       }
     } catch (err) {
       setError(
-        'There was a problem submitting your inquiry. Please try again or email us directly at environmentaldesign.com@proton.me'
+        'There was a problem submitting your inquiry. Please try again or email us directly at admin@historictourist.com'
       );
       console.error(err);
     } finally {
@@ -55,8 +55,9 @@ function InquiryForm() {
       <div className="text-center p-8 bg-white bg-opacity-10 backdrop-blur-sm rounded">
         <h3 className="text-2xl text-white mb-4">Thank You</h3>
         <p className="text-gray-200">
-          Your inquiry has been received. We'll be in touch shortly regarding
-          the acquisition of EnvironmentalDesign.com.
+          Your collaboration inquiry has been received. We'll be in touch
+          shortly to explore how we can work together to bring authentic
+          heritage experiences to travelers.
         </p>
       </div>
     );
@@ -68,7 +69,7 @@ function InquiryForm() {
       className="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded"
     >
       <h3 className="text-2xl text-white mb-6 font-light">
-        Acquisition Inquiry
+        Collaboration Inquiries
       </h3>
 
       {error && (
@@ -105,7 +106,7 @@ function InquiryForm() {
         <input
           type="text"
           name="company"
-          placeholder="Company (Optional)"
+          placeholder="Organization/Institution (Optional)"
           className="w-full p-3 bg-transparent border border-gray-300 text-white placeholder-gray-300"
           value={formData.company}
           onChange={handleChange}
@@ -115,7 +116,7 @@ function InquiryForm() {
       <div className="mb-6">
         <textarea
           name="message"
-          placeholder="Your Message"
+          placeholder="Tell us about your heritage site, local expertise, or how you'd like to collaborate with Historic Tourist..."
           rows="4"
           className="w-full p-3 bg-transparent border border-gray-300 text-white placeholder-gray-300"
           value={formData.message}
@@ -129,7 +130,7 @@ function InquiryForm() {
         className="w-full border border-white hover:bg-white hover:text-green-900 text-white py-3 transition duration-300 disabled:opacity-50"
         disabled={isSubmitting}
       >
-        {isSubmitting ? 'Submitting...' : 'Submit Inquiry'}
+        {isSubmitting ? 'Submitting...' : 'Submit Collaboration Inquiry'}
       </button>
     </form>
   );
